@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Chrome-like Tabs
 
-## Getting Started
+> Високопродуктивний, чуйний компонент вкладок з підтримкою Drag-and-Drop, закріпленням (Pin) та адаптивним переповненням (Overflow Menu).
 
-First, run the development server:
+![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![Framework](https://img.shields.io/badge/next.js-14%2B-black)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Цей проект демонструє реалізацію складного UI-патерну вкладок, аналогічного Google Chrome, побудованого на **Next.js (App Router)**. Компонент вирішує складні завдання UX, такі як перетягування елементів між різними контейнерами (панель <-> меню) та точний розрахунок ширини для адаптивності.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Основні можливості
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **🖱️ Плавний Drag-and-Drop:** Використання `@dnd-kit` для перетягування вкладок.
+- **📌 Закріплення (Pinning):** Можливість закріплювати вкладки зліва (як у браузері). Закріплені вкладки мають фіксовану позицію і не перекриваються звичайними.
+- **📉 Розумне переповнення (Smart Overflow):** Вкладки, що не вміщуються на екрані, автоматично переносяться у випадаюче меню ("More" button).
+- **🔄 Cross-Container Dragging:** Унікальна фіча — можливість перетягнути вкладку з випадаючого меню прямо на панель і навпаки.
+- **💾 Персистенція:** Стан вкладок (порядок, закріплення) зберігається в `localStorage`.
+- **🧭 Навігація:** Повна інтеграція з `next/navigation` (Router).
+- **⚡ Оптимізація:** Використання `ResizeObserver` та `Debounce` для мінімізації ре-рендерів.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Технологічний стек
 
-## Learn More
+Проєкт побудований на сучасному стеку технологій з акцентом на продуктивність та типізацію.
 
-To learn more about Next.js, take a look at the following resources:
+### Core
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Next.js 14+](https://nextjs.org/)** — React фреймворк (App Router).
+- **[TypeScript](https://www.typescriptlang.org/)** — Сувора типізація для надійності коду.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Drag & Drop Engine
 
-## Deploy on Vercel
+- **[@dnd-kit/core](https://dndkit.com/)** — Ядро DnD логіки.
+- **[@dnd-kit/sortable](https://dndkit.com/)** — Пресети для сортування списків.
+- **[@dnd-kit/modifiers](https://dndkit.com/)** — Обмеження руху (наприклад, тільки по осі X).
+- **[@dnd-kit/utilities](https://dndkit.com/)** — CSS утиліти для трансформацій.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling & UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **[Tailwind CSS](https://tailwindcss.com/)** — Утилітарний CSS фреймворк.
+- **[Lucide React](https://lucide.dev/)** — Красиві та легкі іконки.
+- **[clsx](https://github.com/lukeed/clsx) / [tailwind-merge](https://github.com/dcastil/tailwind-merge)** — Утиліти для умовного об'єднання класів без конфліктів.
+
+## 📦 Встановлення та запуск
+
+1.  **Клонуйте репозиторій:**
+
+    ```bash
+    git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
+    ```
+
+2.  **Встановіть залежності:**
+
+    ```bash
+    npm install
+    # або
+    yarn install
+    ```
+
+3.  **Запустіть дев-сервер:**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  Відкрийте [http://localhost:3000](http://localhost:3000) у браузері.
