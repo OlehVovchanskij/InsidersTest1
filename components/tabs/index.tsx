@@ -21,7 +21,7 @@ import { TabDropdown } from './tab-dropdown'
 import { TabItem } from './tab-item'
 import { Tab } from './types'
 
-import { usePersistedTabs } from '@/app/hooks/use-persisted-tabs'
+import { usePersistedTabs } from '../../hooks/use-persisted-tabs'
 import { PinnedTabsMenu } from './pinned-menu'
 import { useTabsOverflow } from './use-tabs-overflow'
 
